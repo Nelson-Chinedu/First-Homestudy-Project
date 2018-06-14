@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Animal store">
+    <meta name="keywords" content="HTML,CSS,JavaScript,animal,store,animal-store">
+    <meta name="author" content="Chinedu Nelson">
+    <title>Animal store</title>
+</head>
+<body style="margin:0px;padding:0px;">
+    <div class="main-container">
+        <img src="image/bg.jpg" alt="image" width="100%" height="100%" style="position:absolute; top:0px; opacity:0.4; z-index:-1">
+        <div class="container" style=" position:relative;text-align: center; margin: 15em auto 0;padding: 0px 10px;">
+            <h2 class='caption-hello' style="margin: 0;padding: 0 10px;color:#24599e;font-size:5em;font-family:helvetica,arial; ">
+                Hello <span class='caption-world' style="color: #ce4e0e;">World</span> 
+            </h2>
+            <p style="font-size:20px">[ hit F5 or reload window to enter search again ]</p>
+        </div>
+    </div>
+<script>
+    // initializing static list of animals
+    var animalList = [
+        'dog','cow','goat','horse','pig','elephant','leopard','tiger','camel',
+        'sheep','monkey','chimpazee','donkey','hippotamus','cheetah','buffalo',
+        'bull','gorilla','zebra','cat','ram','kangaroo','lion','wolf','antelope',
+        'bear','fox','deer'
+    ];
+
+    // creating a function to get input from keyboard
+    function getInput(){
+        var userInput = prompt("Please enter animal name");
+        var trimInput = userInput.trim();
+        var lowerInput = trimInput.toLowerCase();
+        return lowerInput;
+    }
+
+    // function to search keyboard input via indexOf 
+    // in the static list of animals
+    function searchInput(){
+        var checkInput = animalList.indexOf(getInput());
+        if(checkInput === -1){
+            alert("Ooopps...Sorry match not found");
+        }else{
+            alert("Match found");
+        }
+    }
+
+    // searchInput function is called 
+    searchInput();
+    
+</script> 
+</body>
+</html>
